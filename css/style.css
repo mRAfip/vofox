@@ -1,0 +1,528 @@
+/*
+Author: muhammed
+
+
+[Table of contents] 
+
+
+1. SITE STRUCTURE and TYPOGRAPHY
+- 1.1 Preloader
+- 1.2 Animations title
+- 1.3 Buttons
+- 1.4 Structure
+
+
+2. CONTENT
+- 2.0 header
+- 2.1 banner
+- 2.2 service
+- 2.3 company slider
+- 2.4 casestudy
+- 2.5 testimonial
+- 2.6 newsletter
+- 2.7 footer
+
+*/
+
+
+/*============================================================================================*/
+/* 1.  SITE STRUCTURE 
+/*============================================================================================*/
+
+@-webkit-keyframes background {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+@-moz-keyframes background {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+@-o-keyframes background {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+@keyframes background {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+
+}
+
+
+.active_btn {
+
+    background:#000;
+}
+
+
+
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  background-color: #292b33;
+  z-index: 99999999999 !important;
+  overflow: hidden;
+}
+
+#preloader.loaded {
+  -webkit-animation: background 0.65s normal forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -moz-animation: background 0.65s normal forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-animation: background 0.65s normal forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  animation: background 0.65s normal forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s;
+}
+
+[data-loader="circle-side"] {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+  -webkit-animation: circle infinite .95s linear;
+  -moz-animation: circle infinite .95s linear;
+  -o-animation: circle infinite .95s linear;
+  animation: circle infinite .95s linear;
+  border: 2px solid #111;
+  border-top-color: rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.2);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  border-radius: 100%;
+}
+
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes circle {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes circle {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes circle {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+/* start padding  */
+
+
+.section_padding{
+
+  padding: 10% 20%;
+
+}
+.section_padding_vertical{
+
+  padding: 8% 0%;
+}
+
+
+
+
+/* start padding  */
+
+
+/*============================================================================================*/
+/* 2.  content
+/*============================================================================================*/
+
+
+/*-------- 1.1 Typography --------*/
+/* rem reference
+10px = 0.625rem
+12px = 0.75rem
+14px = 0.875rem
+16px = 1rem (base)
+18px = 1.125rem
+20px = 1.25rem
+24px = 1.5rem
+30px = 1.875rem
+32px = 2rem
+*/
+
+html * {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #faf8f5;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  font-family: "Readex Pro", sans-serif;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
+  font-weight: 700;
+  letter-spacing: -.03em;
+  line-height: 1.3;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+
+p {
+  margin-bottom: 25px;
+}
+
+strong {
+  font-weight: 600;
+}
+
+p.lead strong {
+  font-weight: 500;
+}
+
+hr {
+  margin: 30px 0 30px 0;
+  border-color: #d9e1e6;
+  opacity: 1;
+}
+
+
+/* Header */
+
+.hero{
+
+  background-image: url('../img//hero_back.jpg');
+  padding: 1% 0%;
+  background-size: cover; /* or 'contain' depending on your preference */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+nav {
+  background-color: transparent;
+  
+}
+
+nav ul {
+  display: flex; /* Make the list items appear in a row */
+  justify-content: center; /* Center-align the list items horizontally */
+  
+}
+
+
+/* General styles for the hero section */
+
+
+
+/* Your hero section's styles go here */
+
+/* Style the mobile menu toggle button */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: transparent;
+  margin: 5px 0;
+}
+
+.item { 
+  
+color:#fff !important;
+font-family: "Readex Pro", sans-serif;
+padding: 0 20px !important;
+
+}
+
+/* Media query for smaller screens */
+@media (max-width: 992px) {
+  /* .menu-toggle {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #333; 
+      z-index: 1;
+       
+  } */
+
+  /* .menu {
+      display: none;
+      flex-direction: column;
+      background-color: #000;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      
+  }
+
+  .menu.active {
+      display: flex;
+  } */
+  
+
+  .menu-toggle{
+    visibility: hidden;
+  }
+
+  .menu{
+    visibility: hidden;
+  }
+
+  .hero{
+
+   
+    padding: 0% 0%;
+    
+  }
+
+
+}
+
+.hero_content{
+
+  color: #fff;
+  
+}
+
+.hero_heading_1{
+
+  font-size: 9rem;
+  font-weight: 600;
+  font-family: "Readex Pro", sans-serif;
+
+}
+.hero_heading_2_div{
+
+  margin-left: 10%;
+}
+
+.hero_para{
+
+  width: 65%;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+
+
+  .hero{
+
+    padding: 0% 5%;
+
+  
+  }
+  .hero_heading_1{
+
+    font-size: 4rem;
+    font-weight: 600;
+   
+  
+  }
+  .hero_para{
+
+    width: 95%;
+  }
+
+
+}
+
+
+
+/* services section*/
+
+
+.service{
+
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.service_sec_head{
+
+  font-size: 5rem;
+  font-weight: 900;
+  font-family: "Readex Pro", sans-serif;
+  color: #402095;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+
+
+.service_item{
+
+  display: flex;
+  width: 100%;
+  padding: 2% 2%;
+  margin-bottom: 2%;
+
+ 
+  
+
+}
+
+.service_item:hover{
+
+  border-radius: 50px;
+  background-color: #F9F9F9;
+  
+}
+
+
+.icon_div_inner{
+
+  border: solid 1px #cacaca;
+  padding: 30px 30px;
+  border-radius: 100%;
+}
+
+.text_div{
+
+  margin-left: 6%;
+  font-family: "Readex Pro", sans-serif;
+}
+
+.text_div_head{
+
+  text-transform: uppercase;
+}
+
+.text_div_para{
+
+  opacity: 0.7;
+}
+
+/* services section*/
+
+
+
+/* company slider start  */
+
+
+.swiper {
+ width: 100%;
+ 
+}
+
+.slide_content_div{
+
+  padding: 0 3%;
+}
+
+.slide_content_div_head {
+
+  font-family: "Readex Pro", sans-serif;
+  font-weight: 900;
+  color:#402095;
+  font-size: 3rem;
+}
+
+
+.swiper_img_div{
+
+background-color: #F3F3F3;
+padding: 2% 2%;
+border-radius: 40px;
+}
+.swiper_img_div{
+
+  width: 100%;
+  height: auto;
+}
+/* company slider start  */
